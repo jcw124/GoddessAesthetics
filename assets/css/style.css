@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Julius Sans One', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    background-color:#b9b9b9;
+}
+.wrapper {
+    background-color:rgb(204, 204, 204);
+    min-height: 30px;
+}
+header {
+    min-height:380px;
+    background-color:#b9b9b9;
+}
+header.container-fluid {
+    padding: 0;
+}
+.navWrapper {
+    background: #636363;
+    width:100%;
+}
+.service1, .service2 {
+    min-height: 200px;
+}
+.service1 {
+    background: #494949;
+}
+.service2 {
+    background: #747474;
+}
+
+@media (max-width: 575.98px) {
+
+}
+
+@media (max-width: 767.98px) {
+
+}
+
+@media (max-width: 991.98px) {
+
+}
+
+@media (max-width: 1199.98px) {
+
+}
