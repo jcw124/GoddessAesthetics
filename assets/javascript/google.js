@@ -30,6 +30,7 @@ $(document).ready(function () {});
      // Handle initial sign-in state. (Determine if user is already signed in.)
      var user = GoogleAuth.currentUser.get();
      setSigninStatus();
+   
 
      // Call handleAuthClick function when user clicks on
      //      "Sign In/Authorize" button.

@@ -31,7 +31,7 @@ appointment = {
     "description": "appointment ",
     "attendees": [
      {
-      "email": "jcw_124@sbcglobal.net"
+      "email": "jcw124sbc@gmail.com"
      }
     ],
     "reminders": {
