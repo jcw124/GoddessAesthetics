@@ -7,10 +7,10 @@
 a {
     text-decoration:none;
 }
-.booking_tab a:hover {
+#booking_side_tab a:hover {
     text-decoration:none;
 }
-.booking_tab h1:hover {
+#booking_side_tab h1:hover {
     background-color: rgba(255, 128, 204, 0.75);
 }
 body {
@@ -60,7 +60,7 @@ header.container-fluid {
 .service2 {
     background: #ececec;
 }
-.booking_tab h1 {
+#booking_side_tab h1 {
     background-color: rgba(255,36,168, 0.75);
     font-size: 31px;
     font-weight: 700;
@@ -70,7 +70,7 @@ header.container-fluid {
     letter-spacing: -1px;
     line-height: 19px;
 }
-.booking_tab {
+#booking_side_tab {
     max-width:197px;
     position:fixed;
     right:-9px;
@@ -107,7 +107,7 @@ label {
     margin-bottom: .5rem;
     font-weight: 100;
 }
-.btn-primary {
+/* .btn-primary {
     background-color:rgba(255,36,168, 0.75);
     border:none;
 }
@@ -115,6 +115,19 @@ label {
     background-color:rgba(255, 128, 204, 0.75);
 }
 .btn-primary:not(:disabled):not(.disabled):active {
+    background-color:rgba(255,36,168, 0.75);
+} */
+.btn-pink {
+    background-color:rgba(255,36,168, 0.75);
+    border:none;
+    border: 1px solid transparent;
+}
+.btn-pink:hover {
+    background-color:transparent;
+    color:#ff24a8bf;
+    border: 1px solid rgba(255,36,168, 0.75);
+}
+.btn-pink:not(:disabled):not(.disabled):active {
     background-color:rgba(255,36,168, 0.75);
 }
 .btn-white {
@@ -153,14 +166,21 @@ nav a .bold {
 .serviceDiv:hover {
     background: rgba(0,0,0,.5)
 }
+.smicon {
+    max-width: 40px;
+    min-width: 20px;
+    width: 100%;
+    margin-top: 10px;
+    fill:#666;
+}
 
 @media (max-width: 575.98px) {
 
 }
 
 @media (max-width: 767.98px) {
-    .booking_tab {
-        bottom:8px;
+    #booking_side_tab {
+        bottom:68px;
     }
 }
 
