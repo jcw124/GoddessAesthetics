@@ -53,6 +53,49 @@ database.ref().orderByChild("dateAdded").on("child_added", function(snapshot) {
 
   // Handle the errors
 }, function(errorObject) {
-  console.log("Errors handled: " + errorObject.code);
+  console.log("Contact Us Errors handled: " + errorObject.code);
 });
 
+
+// Capture Booking info from form
+$("#bksignin").on("click", function(event) {
+  event.preventDefault();
+
+console.log("button click function line 68");
+
+//Collect values from Booking form
+BookingFirstName = $("#bkfname").val().trim();
+BookingLastName = $("#bklname").val().trim();
+BookingEmail = $("#bkemailAdd").val().trim();
+BookingPhone = $("#bkphone").val().trim();
+BookingNotes = $("#bknotes").val().trim();
+BookingService1 = $("#bkservices").val();
+BookingService2 =$("#bkservices1").val();
+
+console.log(BookingFirstName + " " + BookingLastName);
+console.log(BookingEmail);
+console.log(BookingPhone);
+console.log(BookingNotes);
+console.log(BookingService1 + BookingService2);
+
+// Push booking values to database
+database.ref("bookings").push({
+FirstName: BookingFirstName,
+LastName: BookingLastName,
+Email: BookingEmail,
+PhoneNumber: BookingPhone,
+Notes: BookingNotes,
+Services: BookingService1,
+AddtlServices: BookingService2,
+dateAdded: firebase.database.ServerValue.TIMESTAMP
+});
+});
+// Firebase watcher 
+database.ref().orderByChild("dateAdded").on("child_added", function(snapshot) {
+// storing the snapshot.val() in a variable for convenience
+var booking = snapshot.val();
+
+// Handle the errors
+}, function(errorObject) {
+console.log("Booking Errors handled: " + errorObject.code);
+});
