@@ -14,8 +14,49 @@ $(document).ready(function () {});
   //Initialize database variable
  var database = firebase.database();
 
- //Contact Us form variables
+ //Initialize Contact Us form variables
  var ContactFirstName, ContactLastName, ContactEmail, ContactPhone, ContactMessage;
+
+ //Initialize services Variables
+ var service = services[];
+ console.log(services[]);
+
+
+//Services
+function ListServices() {
+  for (i = 0; i < services.length; i++) {
+    var serviceTitle = services.title[i];
+    var serviceFee = services.fee[i];
+    var serviceDescription = services.description[i];
+    console.log(serviceTitle + serviceFee + serviceDescription);
+}
+}; 
+
+
+// function Questions() {
+//   $("#questions").empty();
+//   $("<h2>").empty();
+//   if (ticker == 20) {
+//     endgame();
+//   } else {
+
+//     $("#questions").append(questions[ticker].question);
+//     var questionText = questions[ticker].question;
+//     var answer = questions[ticker].answer;
+
+//     var choicea = $("<div id='choicea' class='choices'>");
+//     var choiceb = $("<div id='choiceb' class='choices'>");
+//     var choicec = $("<div id='choicec' class='choices'>");
+//     var choiced = $("<div id='choiced' class='choices'>");
+//     correctanswer = $("<div id='answer' class='answer'>");
+
+//     choicea.append(questions[ticker].choices[0]);
+//     choiceb.append(questions[ticker].choices[1]);
+//     choicec.append(questions[ticker].choices[2]);
+//     choiced.append(questions[ticker].choices[3]);
+
+//     $("#questions").append(choicea, choiceb, choicec, choiced);
+
 
 
  // Capture Contact info from form
@@ -56,3 +97,4 @@ database.ref().orderByChild("dateAdded").on("child_added", function(snapshot) {
   console.log("Errors handled: " + errorObject.code);
 });
 
+ListServices();
