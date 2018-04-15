@@ -15,7 +15,7 @@ $(document).ready(function () {});
   //Initialize database variable
  var database = firebase.database();
 
-//Ajax test call 
+ //Ajax test call 
 $(document).on("click",".btn", function(){
 
 queryURL = "https://www.googleapis.com/calendar/v3/calendars/primary/events?sendNotifications=true&supportsAttachments=true&fields=endTimeUnspecified%2Cgadget%2Corganizer%2Creminders%2FuseDefault%2Cstart&key=AIzaSyABfyoUKd5LoeP8AXbn05AXwSjr9C4LCcY"
