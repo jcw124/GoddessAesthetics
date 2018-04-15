@@ -18,7 +18,7 @@ $(document).ready(function () {});
  var ContactFirstName, ContactLastName, ContactEmail, ContactPhone, ContactMessage;
 
  //Initialize services Variables
- var service = services[];
+ var serviceArray = services[];
  console.log(services[]);
 
 
