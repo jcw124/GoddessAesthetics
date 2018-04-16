@@ -17,6 +17,9 @@ $(document).ready(function () {});
  //Contact Us form variables
  var ContactFirstName, ContactLastName, ContactEmail, ContactPhone, ContactMessage;
 
+ //Booking form variables
+ var BookingFirstName, BookingLastName, BookingEmail, BookingPhone, BookingNotes, BookingService1, BookingService2, BookingDate, BookingTime, time, date, datetime, apptTime;
+
 
  // Capture Contact info from form
 $("#signin").on("click", function(event) {
@@ -60,7 +63,7 @@ database.ref().orderByChild("dateAdded").on("child_added", function(snapshot) {
 // Capture Booking info from form
 $("#bksignin").on("click", function(event) {
   event.preventDefault();
-
+  
 console.log("button click function line 68");
 
 //Collect values from Booking form
@@ -70,13 +73,25 @@ BookingEmail = $("#bkemailAdd").val().trim();
 BookingPhone = $("#bkphone").val().trim();
 BookingNotes = $("#bknotes").val().trim();
 BookingService1 = $("#bkservices").val();
-BookingService2 =$("#bkservices1").val();
+BookingService2 = $("#bkservices1").val();
+BookingDate = $("#bkdate").val();
+BookingTime = $("#bktime").val();
 
 console.log(BookingFirstName + " " + BookingLastName);
 console.log(BookingEmail);
 console.log(BookingPhone);
 console.log(BookingNotes);
 console.log(BookingService1 + BookingService2);
+console.log(BookingDate);
+console.log(BookingTime);
+time = moment(BookingTime).format();    
+date = moment(BookingDate).format();    
+datetime = BookingDate + " " + BookingTime;
+apptTime = moment(datetime).format();  
+//console.log(time);
+console.log(date);
+console.log(datetime);
+console.log(apptTime);
 
 // Push booking values to database
 database.ref("bookings").push({
