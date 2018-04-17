@@ -45,6 +45,8 @@
        *  appropriately. After a sign-in, the API is called.
        */
       function updateSigninStatus(isSignedIn) {
+        console.log("authorize");
+        console.log()
         if (isSignedIn) {
           authorizeButton.style.display = 'none';
           signoutButton.style.display = 'block';
@@ -108,6 +110,7 @@
         });
       }
       function AddNewEvents() {
+        console.log("hello");
         var event = {
           'summary': 'Goddess Aesthetics Appointment',
           'description': BookingService1 + " " + BookingService2,
@@ -142,3 +145,4 @@
           console.log('Event created: ' + event.htmlLink);
         });
       }
+
