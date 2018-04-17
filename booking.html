@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Open+Sans:300,300i,400,400i,600,600i,700,800,800i" rel="stylesheet">
 
 </head>
-<body>
+<body class="testBg">
     <div id="booking_side_tab">
         <a href="booking.html"><h1>BOOK AN<br><span class="kerning">APPOINTMENT</span></h1></a>
     </div>
@@ -45,16 +45,16 @@
                              <div class="form-row">
                                     <div class="form-group col-6">
                                     <label for="bkfname">First Name</label>
-                                    <input type="text" class="form-control" id="bkfname" placeholder="first name">
+                                    <input type="text" class="form-control" id="bkfname" placeholder="First Name">
                                     </div>
                                     <div class="form-group col-6">
                                     <label for="bklname">Last Name</label>
-                                    <input type="text" class="form-control" id="bklname" placeholder="last name">
+                                    <input type="text" class="form-control" id="bklname" placeholder="Last Name">
                                     </div>
                              </div>
                                     <div class="form-group">
                                         <label for="bkemailAdd">Email</label>
-                                        <input type="email" class="form-control" id="bkemailAdd" placeholder="example@gmail.com">
+                                        <input type="email" class="form-control" id="bkemailAdd" placeholder="Example@gmail.com">
                                     </div>
                                 <div class="form-group">
                                     <label for="bkphone">Phone Number</label>
@@ -63,6 +63,7 @@
                                 <div class="form-group">
                                         <label for="bkservices">Select the Service you are booking</label>
                                         <select class="form-control" id="bkservices">
+                                          <option>   </option>  
                                           <option>Aromatherapy Facial</option>
                                           <option>Back Facial</option>
                                           <option>Basic Facial</option>
@@ -79,6 +80,7 @@
                                       <div class="form-group">
                                         <label for="bkservices2">Select an additional Service</label>
                                         <select class="form-control" id="bkservices1">
+                                          <option>   </option>  
                                           <option>Aromatherapy Facial</option>
                                           <option>Back Facial</option>
                                           <option>Basic Facial</option>
@@ -96,53 +98,37 @@
                                     <label for="bknotes">Additional Notes or Services</label>
                                     <input type="text" class="form-control" id="bknotes" placeholder="Additional Notes">
                                 </div>
-                                <button type="submit" id="bksignin" class="btn btn-pink">Submit</button>
+
+                                <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="bkdate">Enter the Date</label>
+                                          <input type="text" class="form-control" id="bkdate" placeholder="mm/dd/yyyy">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="bktime">Select an Appointment Time</label>
+                                          <select id="bktime" class="form-control">
+                                            <option selected>Choose...</option>
+                                            <option>09:00 AM</option>
+                                            <option>11:00 AM</option>
+                                            <option>01:00 PM</option>
+                                            <option>03:00 PM</option>
+                                            <option>05:00 PM</option>
+                                          </select>
+                                        </div>
+                                    </div>
+                                    <button id="authorize-button"  style="display: none;">Authorize</button>
+                                    <button id="signout-button" style="display: none;">Sign Out</button>   
+
+                                    <!-- <button type="submit" id="bksignin" class="btn btn-pink">Submit Appointment</button> -->
+
+                             
+                                    <pre id="content"></pre>
+                                    <pre id="appointmnet"></pre>
                     </form>
                  </div>
         </div>
         </div>
-        <!-- <div class="row">
-            <div class="col-6 col-sm-4 col-md-3 service1">
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 service2">
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 service1">
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 service2">
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 service2">
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 service1">
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 service2">
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 service1">
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 service1">
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 service2">
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 service1">
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 service2">
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 service2">
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 service1">
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 service2">
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 service1">
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 service1">
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 service2">
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 service1">
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 service2">
-            </div>
-        </div> -->
+        
     </main>
 
     <footer class="container-fluid">
@@ -170,6 +156,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 <script src="assets/javascript/app.js"></script>
+<script src="assets/javascript/google1.js"></script>
+<script async defer src="https://apis.google.com/js/api.js"
+ onload="this.onload=function(){};handleClientLoad()"
+ onreadystatechange="if (this.readyState === 'complete') this.onload()">
+</script>
+
+</script>
 </body>
 </html>
