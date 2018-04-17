@@ -4,6 +4,9 @@
     font-family: 'Open Sans', sans-serif;
     color:#fff;
 }
+main {
+    margin-bottom:100px;
+}
 a {
     text-decoration:none;
 }
@@ -16,13 +19,21 @@ a {
 body {
     position: relative;
 }
+.contactBg {
+  background: url(../images/static/contactBg.jpg) no-repeat left center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 .testBg {
     background-color: #f3f3f3;
 }
 .services h1, .booking h1, .contact h1, .portfolio h1 {
     font-size: 1.25rem;
     margin: 0px;
-    color:#8b8b8b;
+    color:#616161;
+    font-weight: 600;
 }
 .wrapper {
     background-color:#cccccc;
@@ -30,13 +41,16 @@ body {
 }
 header.services {
     min-height:380px;
-    background-color:#f5f5f5;
+    background-image:url(../images/static/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
 }
 header.container-fluid {
     padding: 0;
 }
 .navWrapper {
-    background: #ffffffbf;
+    background: rgba(255, 255, 255, 0.75);
     width:100%;
     position:fixed;
     top:0px;
@@ -51,14 +65,14 @@ header.container-fluid {
 .title {
     padding: 10px;
 }
-.service1, .service2 {
+.serviceDiv {
+    background-color:#dadada;
+    position: relative;
     min-height: 200px;
+    cursor: pointer;
 }
-.service1 {
-    background: #ffffff;
-}
-.service2 {
-    background: #ececec;
+.serviceDiv:hover {
+    background-color:#fdd4ed;
 }
 #booking_side_tab h1 {
     background-color: rgba(255,36,168, 0.75);
@@ -102,7 +116,7 @@ input[type=text], input[type=email] {
     color: #e2e2e2;
 }
 label {
-    color: #b9b9b9;
+    color: #6b6b6b;
     display: inline-block;
     margin-bottom: .5rem;
     font-weight: 100;
@@ -118,6 +132,7 @@ label {
     background-color:rgba(255,36,168, 0.75);
 } */
 .btn-pink {
+    color:#fff;
     background-color:rgba(255,36,168, 0.75);
     border:none;
     border: 1px solid transparent;
@@ -163,9 +178,6 @@ label {
 nav a .bold {
     color:#2b2b2b;
 }
-.serviceDiv:hover {
-    background: rgba(0,0,0,.5)
-}
 .smicon {
     max-width: 40px;
     min-width: 20px;
@@ -173,7 +185,94 @@ nav a .bold {
     margin-top: 10px;
     fill:#666;
 }
+.smicon:hover {
+    fill:#acacac;
+}
+footer {
+    background-color: rgba(255, 255, 255, 0.75);
+    position: fixed;
+    bottom: 0;
+    padding:5px;
+}
 
+/* service images bgs */
+#basicFacial {
+    background-image: url(../images/static/servbg1.png);
+}
+
+#europeanMassage {
+    background-image: url(../images/static/servbg2.png);
+}
+
+#aromatherapyFacial {
+    background-image: url(../images/static/servbg3.png);
+}
+
+#backFacial {
+    background-image: url(../images/static/servbg4.png);
+}
+
+#expressFacial {
+    background-image: url(../images/static/servbg5.png);
+}
+#deepPore {
+    background-image: url(../images/static/servbg6.png);
+}
+
+#makeUp {
+    background-image: url(../images/static/servbg7.png);
+}
+
+#eyelashExtensions {
+    background-image: url(../images/static/servbg8.png);
+}
+
+#dramaticEyelashExtensions {
+    background-image: url(../images/static/servbg9.png);
+}
+
+#catEyelashExtensions {
+    background-image: url(../images/static/servbg10.png);
+}
+#bodyWaxing {
+    background-image: url(../images/static/servbg11.png);
+}
+
+#eyelashExtensionsTraining {
+    background-image: url(../images/static/servbg12.png);
+}
+
+.services .white {
+    color:#fff;
+    font-weight: 700;
+    line-height: 1;
+    font-size: 1.4em;
+    letter-spacing: -1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.headerTitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.headerTitle h1 {
+    color: #565656;
+    font-size: 47px;
+    font-weight: 700;
+    letter-spacing: -4px;
+}
+.headerTitle p {
+    color: #565656;
+}
+form {
+    padding: 30px;
+    background-color: rgba(195, 195, 195, 0.4);
+    border-radius: 10px;
+}
 @media (max-width: 575.98px) {
 
 }
@@ -181,6 +280,9 @@ nav a .bold {
 @media (max-width: 767.98px) {
     #booking_side_tab {
         bottom:68px;
+    }
+    .services .white {
+        font-size: 1.2em;
     }
 }
 
