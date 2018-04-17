@@ -45,8 +45,6 @@
        *  appropriately. After a sign-in, the API is called.
        */
       function updateSigninStatus(isSignedIn) {
-        console.log("authorize");
-        console.log()
         if (isSignedIn) {
           authorizeButton.style.display = 'none';
           signoutButton.style.display = 'block';
@@ -109,17 +107,25 @@
           }
         });
       }
+
+      //Add a new ence to the authorized users calendar
       function AddNewEvents() {
         console.log("hello");
+        console.log(BookingEmail + BookingService1 + BookingService2 + apptTime);
+
         var event = {
           'summary': 'Goddess Aesthetics Appointment',
-          'description': BookingService1 + " " + BookingService2,
+          'description': BookingService1 + '<p>' + BookingService2,
           'organizer' :
                     {
               'displayName' : 'Goddess Aesthetics'
           },
           'start': {
             'dateTime': apptTime,
+            'timeZone': 'America/Los_Angeles'
+          },
+          'end': {
+            'dateTime': endTime,
             'timeZone': 'America/Los_Angeles'
           },
           'attendees': [
@@ -130,19 +136,25 @@
             'useDefault': false,
             'overrides': [
               {'method': 'email', 'minutes': 24 * 60},
-              {'method': 'popup', 'minutes': 10}
+              {'method': 'popup', 'minutes': 24 * 60},
+              {'method': 'popup', 'minutes': 60}
             ]
           }
         };
         
+        console.log(event);
+
         var request = gapi.client.calendar.events.insert({
           'calendarId': 'primary',
           'resource': event
         });
         
         request.execute(function(event) {
-          appendPre('Event created. Please note that your appointment is not Final until a deposit has been made.' );
+          appendPre('Appointment has been booked. Please make your deposit within 24 hours.' );
           console.log('Event created: ' + event.htmlLink);
         });
       }
 
+
+
+  

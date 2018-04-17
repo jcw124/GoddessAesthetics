@@ -18,7 +18,7 @@ $(document).ready(function () {});
  var ContactFirstName, ContactLastName, ContactEmail, ContactPhone, ContactMessage;
 
  //Booking form variables
- var BookingFirstName, BookingLastName, BookingEmail, BookingPhone, BookingNotes, BookingService1, BookingService2, BookingDate, BookingTime, time, date, datetime, apptTime;
+ var BookingFirstName, BookingLastName, BookingEmail, BookingPhone, BookingNotes, BookingService1, BookingService2, BookingDate, BookingTime, time, date, datetime, apptTime, endTime;
 
 
  // Capture Contact info from form
@@ -88,6 +88,7 @@ time = moment(BookingTime).format();
 date = moment(BookingDate).format();    
 datetime = BookingDate + " " + BookingTime;
 apptTime = moment(datetime).format();  
+endTime = moment(apptTime).add(1, 'hours');
 //console.log(time);
 console.log(date);
 console.log(datetime);
@@ -114,3 +115,5 @@ var booking = snapshot.val();
 }, function(errorObject) {
 console.log("Booking Errors handled: " + errorObject.code);
 });
+
+
