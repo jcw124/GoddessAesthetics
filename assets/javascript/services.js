@@ -1,8 +1,8 @@
 //Define list of services
 var services = [{
-    "title" : "Basic Facial",
-    "fee" : "$65",
-    "description" : "Leave your skin feeling refreshed and clean.  This custom facial includes a personal skin analysis and everything needed for your skin type. You will leave with recommendations for an at home care routine to help you achieve your skin care goals"
+"title" : "Basic Facial",
+"fee" : "$65",
+"description" : "Leave your skin feeling refreshed and clean.  This custom facial includes a personal skin analysis and everything needed for your skin type. You will leave with recommendations for an at home care routine to help you achieve your skin care goals"
 },
 {
 "title" : "European Massage",
@@ -30,7 +30,7 @@ var services = [{
 "description" : "Basic facial that helps unclog pores eliminating Whiteheads and blackheads, killing bacteria, ultimately trying to purify the cells to promote the overall appearance of the skin"
 },
 {
-"title" : "Make Up Application",
+"title" : "Make-Up Application",
 "fee" : "$45",
 "description" : "Full face Makeup with the option of strip lashes or cluster lashes. Also includes costume makeup, or Scary Halloween FX!"
 },
@@ -77,3 +77,32 @@ var addons = [
      "fee" : "$30"
     }
 ]
+
+
+
+
+// function openServicePopUp() {
+//     document.getElementById("servicePopUp").style.display = "inline-block";
+//     document.getElementById("booking_side_tab").style.display = "none";
+//     console.log(serviceTitle);
+//     console.log($(this).text());
+// }
+function closeServicePopUp() {
+    document.getElementById("servicePopUp").style.display = "none";
+    document.getElementById("booking_side_tab").style.display = "inline-block";
+}
+
+$('.serviceDiv').on('click', function() {
+    var serviceTitle = $(this).text();
+
+    document.getElementById("servicePopUp").style.display = "inline-block";
+    document.getElementById("booking_side_tab").style.display = "none";
+    for ( var i = 0 ; i < services.length; i++){
+        if (serviceTitle.trim() == services[i].title){
+            console.log(services[i].title);
+            $('#popServiceTitle').text(services[i].title);
+            $('#popServiceFee').text(services[i].fee);
+            $('#popServiceDescription').text(services[i].description);
+        }
+    }
+});

@@ -65,6 +65,9 @@ header.container-fluid {
 .title {
     padding: 10px;
 }
+.serviceDiv h1 {
+    text-transform:uppercase;
+}
 .serviceDiv {
     background-color:#dadada;
     position: relative;
