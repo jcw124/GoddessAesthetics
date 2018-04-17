@@ -61,7 +61,7 @@ database.ref().orderByChild("dateAdded").on("child_added", function(snapshot) {
 
 
 // Capture Booking info from form
-$("#bksignin").on("click", function(event) {
+$("#authorize-button").on("click", function(event) {
   event.preventDefault();
   
 console.log("button click function line 68");
