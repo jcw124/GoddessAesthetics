@@ -19,7 +19,7 @@ a {
 body {
     position: relative;
 }
-.contactBg {
+.contactBg, .bokingBg {
   background: url(../images/static/contactBg.jpg) no-repeat left center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -76,6 +76,16 @@ header.container-fluid {
 }
 .serviceDiv:hover {
     background-color:#fdd4ed;
+}
+.portfolioDiv {
+    background-color:grey;
+    cursor: pointer;
+    padding-right:0px;
+    padding-left:0px;
+}
+.gallery img {
+    width: 100%;
+    padding-right:0px;
 }
 #booking_side_tab h1 {
     background-color: rgba(255,36,168, 0.75);
