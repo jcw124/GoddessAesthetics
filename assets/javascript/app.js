@@ -1,4 +1,20 @@
-$(document).ready(function () {});
+$(document).ready(function () {
+
+//send mail  using sendgrid
+var sgMail = require('@sendgrid/mail');
+console.log("email line 122");
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+var msg = {
+  to: 'jcw_124@sbcglobal.net',
+  from: 'jcw124sbc@gmail.com',
+  subject: 'Contact us message',
+  text: 'and easy to do anywhere, even with Node.js',
+  html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+};
+sgMail.send(msg);
+
+
+});
 
   // Initialize Firebase
   var config = {

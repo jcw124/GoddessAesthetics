@@ -1,0 +1,22 @@
+{
+  "name": "goddessaesthetics",
+  "version": "1.0.0",
+  "description": "Goddess Aesthetics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcw124/GoddessAesthetics.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcw124/GoddessAesthetics/issues"
+  },
+  "homepage": "https://github.com/jcw124/GoddessAesthetics#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^6.2.1"
+  }
+}

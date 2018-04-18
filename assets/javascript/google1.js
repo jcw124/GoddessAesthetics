@@ -110,7 +110,6 @@
 
       //Add a new ence to the authorized users calendar
       function AddNewEvents() {
-        console.log("hello");
         console.log(BookingEmail + BookingService1 + BookingService2 + apptTime);
 
         var event = {
