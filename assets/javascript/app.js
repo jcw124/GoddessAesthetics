@@ -48,6 +48,22 @@ database.ref("contacts").push({
   Message: ContactMessage,
   dateAdded: firebase.database.ServerValue.TIMESTAMP
 });
+        var name = ContactFirstName + " " + ContactLastName + ContactPhone;
+        var email = ContactEmail
+        var text = ContactMessage
+        var dataString = 'name='+ name + '&email=' + email + '&text=' + text;
+
+        $.ajax({
+            type: "POST",
+            url: "contactus.php",
+            data: dataString,
+            success: function(){
+            $('.success').fadeIn(1000);
+            }
+        });
+console.log("php")
+
+
 });
 // Firebase watcher 
 database.ref().orderByChild("dateAdded").on("child_added", function(snapshot) {
@@ -115,5 +131,3 @@ var booking = snapshot.val();
 }, function(errorObject) {
 console.log("Booking Errors handled: " + errorObject.code);
 });
-
-
