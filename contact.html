@@ -63,7 +63,15 @@
                         <label for="message">Message</label>
                         <input type="text" class="form-control" id="message" placeholder="Message">
                     </div>
-                    <button type="submit" id="signin" class="btn btn-pink">Submit</button>
+                    <!-- <button type="submit" id="signin" class="btn btn-pink">Submit</button> -->
+
+                    <!--Add buttons to initiate auth sequence and sign out-->
+                    <button id="authorize-button" class="btn btn-pink" style="display: none;">Authorize</button>
+                    <button id="signout-button" class="btn btn-pink"style="display: none;">Sign Out</button>
+
+                    <pre id="content"></pre>
+
+
                 </form>
             </div>
         </div>
@@ -95,5 +103,13 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script src="assets/javascript/app.js"></script>
+<script src="assets/javascript/base64.js"></script>
+<script src="assets/javascript/gmail.js"></script>
+
+<script async defer src="https://apis.google.com/js/api.js"
+onload="this.onload=function(){};handleClientLoad()"
+onreadystatechange="if (this.readyState === 'complete') this.onload()">
+</script>
+
 </body>
 </html>

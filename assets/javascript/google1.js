@@ -1,11 +1,4 @@
-//<!--Add buttons to initiate auth sequence and sign out-->
-    // <button id="authorize-button" style="display: none;">Authorize</button>
-    // <button id="signout-button" style="display: none;">Sign Out</button>
-
-  //  <pre id="content"></pre>
-
-   // <script type="text/javascript">
-      // Client ID and API key from the Developer Console
+  // Client ID and API key from the Developer Console
       var CLIENT_ID = '176211938689-2a7veej5asfou4f2k01g78u9g74la9hn.apps.googleusercontent.com';
       var API_KEY = 'AIzaSyCc-CWtS0sKhhW_RGxbHVhUublVKyBawSk';
       // Array of API discovery doc URLs for APIs used by the quickstart
