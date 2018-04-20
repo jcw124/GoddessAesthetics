@@ -1,4 +1,4 @@
-// $(document).ready(function () {});
+$(document).ready(function () {});
 
   // Initialize Firebase
   var config = {
@@ -20,25 +20,19 @@
  //Booking form variables
  var BookingFirstName, BookingLastName, BookingEmail, BookingPhone, BookingNotes, BookingService1, BookingService2, BookingDate, BookingTime, time, date, datetime, apptTime, endTime;
 
- $(document).ready(function () {
+
  // Capture Contact info from form
 $("#signin").on("click", function(event) {
-    // event.preventDefault();
+    event.preventDefault();
 
-// console.log("button click function line 21");
+console.log("button click function line 21");
+
 //Collect values from contact us form
 ContactFirstName = $("#fname").val().trim();
 ContactLastName = $("#lname").val().trim();
 ContactEmail = $("#emailAdd").val().trim();
 ContactPhone = $("#phone").val().trim();
 ContactMessage = $("#message").val().trim();
-
-
-// if (ContactFirstName.length < 3){
-//   $( "input#fname" ).css( "border-color", "red" );
-//   // document.getElementById("fname").style.color = "red";
-//   console.log("what up");
-// }
 
 console.log(ContactFirstName + " " + ContactLastName);
 console.log(ContactEmail);
@@ -53,26 +47,6 @@ database.ref("contacts").push({
   PhoneNumber: ContactPhone,
   Message: ContactMessage,
   dateAdded: firebase.database.ServerValue.TIMESTAMP
-});
-        var name = ContactFirstName + " " + ContactLastName + ContactPhone;
-        var email = ContactEmail
-        var text = ContactMessage
-        var dataString = 'name='+ name + '&email=' + email + '&text=' + text;
-
-        $.ajax({
-            type: "POST",
-            url: "contactus.php",
-            data: dataString,
-            success: function(){
-            $('.success').fadeIn(1000);
-            }
-        });
-console.log("php")
-
-
-});
-$(".submitbtn").submit(function(event){
-  event.preventDefault();
 });
 });
 // Firebase watcher 

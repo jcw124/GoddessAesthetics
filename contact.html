@@ -40,29 +40,30 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
-                <form>
+                <form action="destination.html" method="get" id="theform">
                     <div class="form-row">
                         <div class="form-group col-6">
                         <label for="fname">First Name</label>
-                        <input type="text" class="form-control" id="fname" placeholder="First Name">
+                        <input type="text" class="form-control" name="name" id="fname" required autofocus pattern="[a-zA-Z]{3,}" title="Enter more than 3 letters. No numbers" placeholder="First Name">
                         </div>
                         <div class="form-group col-6">
                         <label for="lname">Last Name</label>
-                        <input type="text" class="form-control" id="lname" placeholder="Last Name">
+                        <input type="text" class="form-control" id="lname" autofocus pattern="[a-zA-Z]{3,}" title="Enter more than 3 letters. No numbers" placeholder="Last Name">
                         </div>
                     </div>
                     <div class="form-group">
                             <label for="emailAdd">Email</label>
-                            <input type="email" class="form-control" id="emailAdd" placeholder="Example@gmail.com">
+                            <input type="email" class="form-control" id="emailAdd" required autofocus autofocus pattern="[a-zA-Z]{3,}@[a-zA-Z]{3,}[.]{1}[a-zA-Z]{2,}" title="Please enter a valid address" placeholder="Example@gmail.com">
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="text" class="form-control" id="phone" placeholder="323-999-9999">
+                        <input type="tel" class="form-control" id="phone" required autofocus pattern="[0-9]{3}[-]{1}[0-9]{3}[-]{1}[0-9]{4}" title="Please enter in this format: ###-###-####"placeholder="323-999-9999">
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <input type="text" class="form-control" id="message" placeholder="Message">
+                        <input type="text" class="form-control" id="message" required autofocus placeholder="Message">
                     </div>
+<<<<<<< HEAD
                     <button type="submit" id="signin" class="btn btn-pink">Submit</button>
 
                     <!--Add buttons to initiate auth sequence and sign out-->
@@ -72,6 +73,9 @@
                     <pre id="content"></pre>
 
 
+=======
+                    <button type="submit" value="submit" id="signin" class="btn btn-pink submitbtn">Submit</button>
+>>>>>>> master
                 </form>
             </div>
         </div>
