@@ -109,7 +109,7 @@ header.container-fluid {
 }
 
 input[type=text], input[type=email] {
-    border:none;
+    border-color:#fff;
     border-radius: 20px;
 }
 
@@ -177,13 +177,13 @@ label {
     z-index:1;
     position: fixed;
     top:5px;
-    margin-top: 120px;
+    margin-top: 60px;
 }
 #serviseTab {
     min-height: 300px;
     background-color: rgba(255, 128, 204, 0.75);
     border-radius:10px;
-    padding: 20px;
+    padding: 10px;
 }
 .bold {
     font-weight: 700;
@@ -286,8 +286,17 @@ form {
     background-color: rgba(195, 195, 195, 0.4);
     border-radius: 10px;
 }
-@media (max-width: 575.98px) {
+#popServiceDescription {
+    font-weight: 100;
+}
 
+@media (max-width: 575.98px) {
+    .headerTitle h1 {
+        font-size: 36px;
+    }
+    .headerTitle p {
+        font-size: 11px;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -296,6 +305,9 @@ form {
     }
     .services .white {
         font-size: 1.2em;
+    }
+    #popServiceTitle {
+        font-size: 32px;
     }
 }
 
