@@ -25,7 +25,6 @@
 $("#signin").on("click", function(event) {
     // event.preventDefault();
 
-// console.log("button click function line 21");
 //Collect values from contact us form
 ContactFirstName = $("#fname").val().trim();
 ContactLastName = $("#lname").val().trim();
@@ -40,10 +39,6 @@ ContactMessage = $("#message").val().trim();
 //   console.log("what up");
 // }
 
-console.log(ContactFirstName + " " + ContactLastName);
-console.log(ContactEmail);
-console.log(ContactPhone);
-console.log(ContactMessage);
 
 // Push contact us values to database
 database.ref("contacts").push({
@@ -67,7 +62,7 @@ database.ref("contacts").push({
             $('.success').fadeIn(1000);
             }
         });
-console.log("php")
+
 
 
 });
@@ -90,7 +85,6 @@ database.ref().orderByChild("dateAdded").on("child_added", function(snapshot) {
 $("#authorize-button").on("click", function(event) {
   event.preventDefault();
   
-console.log("button click function line 68");
 
 //Collect values from Booking form
 BookingFirstName = $("#bkfname").val().trim();
@@ -103,22 +97,12 @@ BookingService2 = $("#bkservices1").val();
 BookingDate = $("#bkdate").val();
 BookingTime = $("#bktime").val();
 
-console.log(BookingFirstName + " " + BookingLastName);
-console.log(BookingEmail);
-console.log(BookingPhone);
-console.log(BookingNotes);
-console.log(BookingService1 + BookingService2);
-console.log(BookingDate);
-console.log(BookingTime);
 time = moment(BookingTime).format();    
 date = moment(BookingDate).format();    
 datetime = BookingDate + " " + BookingTime;
 apptTime = moment(datetime).format();  
 endTime = moment(apptTime).add(1, 'hours');
-//console.log(time);
-console.log(date);
-console.log(datetime);
-console.log(apptTime);
+
 
 // Push booking values to database
 database.ref("bookings").push({

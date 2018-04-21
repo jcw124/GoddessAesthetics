@@ -103,8 +103,7 @@
 
       //Add a new ence to the authorized users calendar
       function AddNewEvents() {
-        console.log("hello");
-        console.log(BookingEmail + BookingService1 + BookingService2 + apptTime);
+        
 
         var event = {
           'summary': 'Goddess Aesthetics Appointment',
@@ -135,7 +134,6 @@
           }
         };
         
-        console.log(event);
 
         var request = gapi.client.calendar.events.insert({
           'calendarId': 'primary',
@@ -143,7 +141,7 @@
         });
         
         request.execute(function(event) {
-          appendPre('Appointment has been booked. Please make your deposit within 24 hours.' );
+          appendPre('Confirmed. Please make your deposit within 24 hours.' );
           console.log('Event created: ' + event.htmlLink);
         });
       }
