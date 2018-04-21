@@ -34,7 +34,7 @@ var services = [{
 "fee" : "$45",
 "description" : "Full face Makeup with the option of strip lashes or cluster lashes. Also includes costume makeup, or Scary Halloween FX!"
 },
-{"title" : "Classic Natural Eyelash Extensionss",
+{"title" : "Classic Natural Eyelash Extensions",
 "fee" : "$70",
 "description" : "Individual eyelash to enhance the natural eyelash in length, curliness or volume. Enhances each eyelash with length. Additional Volume can be added for $10"
 },
