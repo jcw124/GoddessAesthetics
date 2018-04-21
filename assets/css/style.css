@@ -108,7 +108,7 @@ header.container-fluid {
     font-size: 20px;
 }
 
-input[type=text], input[type=email] {
+input[type=text], input[type=email], input[type=tel], select.form-control:not([size]):not([multiple])  {
     border-color:#fff;
     border-radius: 20px;
 }
